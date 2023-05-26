@@ -9,6 +9,7 @@ import Errorboundary from "./Components/errorBoundary";
 function App() {
   const [robots, setRobots] = useState([]);
   const [searchfield, setSearchfield] = useState("");
+  const [count, setCount] = useState(0)
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -31,6 +32,7 @@ function App() {
       ) : (
         <>
           <h1 className="f1">RoboFriends</h1>
+          <button onClick={() =>setCount(count + 1)}></button>
           <SearchBox searchChange={onSearchChange} />
           <Scroll>
             <Errorboundary>
