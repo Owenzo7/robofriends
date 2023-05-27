@@ -4,6 +4,7 @@
 import React from "react";
 
 import Card from "./card.component";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 function CardList({ robots }) {
   return (
@@ -15,8 +16,6 @@ function CardList({ robots }) {
             id={robots[i].id}
             name={robots[i].name}
             email={robots[i].email}
-            
-            
           />
         );
       })}
