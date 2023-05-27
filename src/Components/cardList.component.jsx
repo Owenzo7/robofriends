@@ -4,7 +4,6 @@
 import React from "react";
 
 import Card from "./card.component";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 function CardList({ robots }) {
   return (
